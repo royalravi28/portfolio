@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4483ab9156.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#" >About</a></li>
+                    <li><a href="#" >Services</a></li>
+                    <li><a href="#" >Portfolio</a></li>
+                    <li><a href="#" >Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX designer</p>
+                <h1>Hi , I'm <span>Royal Ravi</span> <br> From  America </h1>
+            </div>
+        </div>
+
+    </div>
+    <!---------------------------About------------------------------------->
+
+    <div id="about">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/photos.jpg">
+            </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me <Menu></Menu></h1>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Neque enim illum tenetur eligendi accusamus adipisci veniam,
+                      est quisquam voluptatem minus quam nobis delectus iure
+                      laboriosam? Minima esse blanditiis ipsam accusantium illo.
+                           Omnis ut eveniet aut fugiat  dicta enim quaerat
+                         in assumenda, numquam, necessitatibus voluptatibus eaque 
+                          quam voluptas dolorum quibusdam.</p>
+                <div class="tab-title">
+                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links active-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links active-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web development</span><br>Web app development</li>
+                        <li><span>App development</span><br>Building Android/ios apps</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="tab-contents " id="experience">
+                    <ul>
+                        <li><span>2022-23</span><br>Learning Fundamentals and Operating System</li>
+                        <li><span>2023-24</span><br>Learing C++ and java also Html and css</li>
+                        <li><span>2024-25</span><br>Learning web app in java </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020</span><br>10th From Nalanda public school Affliated by CBSE</li>
+                        <li><span>2022</span><br>12th from nardiganj college nardiganj stream Science</li>
+                        <li><span>2025</span><br>Graduation from AN College Patna </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   <!---------------------------Services--------------------->
+      <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services <Menu></Menu></h1>
+            <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web designing</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur
+                     adipisicing elit. Blanditiis, ad? Natus
+                      perspiciatis dicta eveniet ea, qui a distinctio
+                       labore consequatur.</p>
+                       <a href="#">Learn More</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur
+                     adipisicing elit. Blanditiis, ad? Natus
+                      perspiciatis dicta eveniet ea, qui a distinctio
+                       labore consequatur.</p>
+                       <a href="#">Learn More</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-java"></i>
+                <h2>App Development</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur
+                     adipisicing elit. Blanditiis, ad? Natus
+                      perspiciatis dicta eveniet ea, qui a distinctio
+                       labore consequatur.</p>
+                       <a href="#">Learn More</a>
+            </div>
+            </div>
+        </div>
+
+      </div>
+
+      <!--------------------------------Portfolio------------------->
+    <script>
+        var  tablinks = document.getElementsByClassName("tab-links");
+        var  tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname)
+        {
+            for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+    
+</body>
+</html>
